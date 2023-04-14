@@ -2,17 +2,17 @@ package org.example.hw230413.task2;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(reverseString("a good    example"));
+        System.out.println(reverseString("  a good    example  "));
     }
 
     /**
      *
-     * @param str Строка;
-     * @return Строка со словами, размещенными в обратном порядке, без лишних пробелов;
+     * @param originalStr Исходная строка;
+     * @return Строка со словами, раcположенными в обратном порядке, без лишних пробелов;
      */
-    public static String reverseString(String str){
-        str = str.trim();
-        String[] words = str.split(" ");
+    public static String reverseString(String originalStr) {
+        originalStr = originalStr.trim();
+        String[] words = originalStr.split(" ");
         String resultStr = "";
         for (int i = words.length - 1; i >= 0; i--) {
             resultStr += words[i];
